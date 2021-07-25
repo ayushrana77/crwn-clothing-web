@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import './App.css'
+import { GloBalStyle } from './global.style'
 import { Switch, Route, Redirect } from 'react-router-dom'
 import { createStructuredSelector } from 'reselect'
 import HomePage from './pages/homepage/homepage'
@@ -18,6 +18,7 @@ const App = ({ checkusersession, currentUser }) => {
 
   return (
     <div>
+      <GloBalStyle />
       <Header />
       <Switch>
         <Route exact path="/" component={HomePage} />
